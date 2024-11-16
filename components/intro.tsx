@@ -13,32 +13,11 @@ import { motion } from 'framer-motion';
 
 const Intro = () => {
   return (
-    <section className='mb-28 max-w-[50rem]  text-center sm:mb-0 scroll-mt-[100rem]'>
-      <div className='flex bottom-0 right-0 text-4xl justify-between'>
-        <div className='flex items-center justify-between'>
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: 'tween',
-              duration: 0.2,
-            }}
-          >
-            {' '}
-            <Image
-              src='/anupam.jpg'
-              alt='anupam'
-              width='400'
-              height='400'
-              quality='95'
-              priority={true}
-              className='h-64 w-64 rounded-full
-               object-cover border-[0.35rem]
-                border-white shadow-xl'
-            />
-          </motion.div>{' '}
+    <section className=''>
+      <div className='flex items-center justify-between'>
+        <div className=''>
           <motion.h1
-            className=' bottom-0 right-0 text-4xl'
+            className=' top-0 bottom-0 text-4xl '
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
@@ -49,29 +28,42 @@ const Intro = () => {
             }}
           >
             {' '}
-            Hey, I'm Anupam👋
+            👋Hey, I'm Anupam
           </motion.h1>
+          <motion.span
+            className=' '
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            A skilled web developer, crafting and
+            managing websites and web applications
+            to ensure the success of the entire
+            product with finesse.
+          </motion.span>
         </div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            type: 'tween',
+            duration: 0.4,
+          }}
+        >
+          {' '}
+          <Image
+            src='/anupam.jpg'
+            alt='anupam'
+            width='400'
+            height='400'
+            quality='95'
+            priority={true}
+            className='h-64 w-64 rounded-full
+               object-cover border-[0.35rem]
+                border-white shadow-xl'
+          />
+        </motion.div>
       </div>
-
       {/* intro text start */}
-
-      <motion.h1
-        className=' mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl'
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-      ></motion.h1>
-      <motion.span
-        className=' mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl'
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        A skilled web developer, crafting and
-        managing websites and web applications to
-        ensure the success of the entire product
-        with finesse.
-      </motion.span>
-      {/* text end intro */}
 
       {/* socle */}
       <motion.div
